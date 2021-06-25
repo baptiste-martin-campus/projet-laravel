@@ -1,27 +1,10 @@
+/* --------------- HEADER --------------- */
 .main-header {
     box-shadow: 0px 5px 10px black;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-}
-
-.home {
-    background-image: url(/img/bieres.png);
-    background-size: cover;
-    background-position: top;
-    background-attachment: fixed;
-    padding-bottom: 250px;
-}
-
-.home h1 {
-    padding: 50px 0px;
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 5px 5px 15px black;
-    border: 2px solid black;
-    color: black;
-    font-size: 50px;
-    margin: 100px 0px;
 }
 
 .navbar, .dropdown-menu {
@@ -55,6 +38,26 @@
     border-color: black;
 }
 
+/* --------------- HOME --------------- */
+.home {
+    background-image: url(/photos/bieres.png);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    padding-bottom: 250px;
+}
+
+.home h1 {
+    padding: 50px 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 15px black;
+    border: 2px solid black;
+    color: black;
+    font-size: 50px;
+    margin: 100px auto;
+    text-align: center;
+}
+
 h2 {
     font-size: 30px;
     margin-left: 400px;
@@ -67,6 +70,7 @@ h2 {
     width: 75%;
     box-shadow: inset 5px 5px 10px black;
     padding: 50px 50px;
+    margin: 0 auto;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -75,6 +79,110 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* --------------- PAGE LISTE PRODUIT ----------------------- */
+.product-list {
+    background-image: url(/photos/bout-de-bois.jpg);
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 50px 0 100px 0;
+}
+
+.product-list h1 {
+    padding: 50px 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 5px 5px 15px black;
+    border: 2px solid black;
+    color: white;
+    font-size: 50px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.product-list h5 {
+    color: white;
+    background-color: black;
+    border-radius: 100px;
+}
+
+.product-list .type-biere {
+    color: white;
+    background-color: black;
+    font-size: 1em;
+    border-radius: 100px;
+}
+
+.product-list .span-carousel {
+    color: white;
+    background-color: black;
+}
+
+.product-list .text-accroche {
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 100px;
+    padding: 20px 10px;
+    border: 2px solid orangered;
+    background-color: rgba(206, 86, 30, 0.5);
+    border-radius: 50px;
+}
+
+.product-list .boite {
+    color: white;
+}
+
+.product-list .boite img {
+    border-radius: 210px;
+}
+
+.product-list button .span-carousel{
+    background: none;
+}
+
+
+/* --------------- PAGE PRODUIT ----------------------- */
+.product {
+    background-image: url(/photos/bieres.png);
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+}
+
+.product h1 {
+    text-align: center;
+    font-size: 50px;
+    border-bottom: 2px solid orangered;
+    border-left: 2px solid orangered;
+    margin: 50px auto;
+    padding: 20px 10px;
+    width: 50%;
+}
+
+.photo-bieres {
+    align-items: center;
+    border-radius: 30%;
+    width: 300px;
+    height: 400px;
+    box-shadow: 5px 5px 20px black;
+}
+
+.product table {
+    margin: 50px auto;
+    width: 75%;
+    text-align: center;
+    border: 3px solid black;
+    background: rgb(206, 86, 30);
+    background: linear-gradient(180deg, rgba(206, 86, 30, 1) 0%, rgba(206, 86, 30, 0.5) 50%, rgba(206, 86, 30, 0) 100%);
+}
+
+.product table thead {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+/* --------------- JESAISPASENCORE ----------------------- */
 #menuaccueil img {
     padding: 25px 25px;
     width: 200px;
@@ -244,103 +352,6 @@ h2 {
     margin-right: 300px;
 }
 
-.row {
-    justify-content: center;
-    text-align: center;
-}
-
-.col-lg-4 {
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding-top: 100px;
-}
-
-.col-lg-4 img {
-    border-radius: 210px;
-}
-
-#biquette {
-    background-color: black;
-    font-size: 1em;
-}
-
-#rakoon {
-    background-color: black;
-    font-size: 1em;
-}
-
-#lion {
-    background-color: black;
-    font-size: 1em;
-}
-
-#grizzly {
-    background-color: black;
-    font-size: 1em;
-}
-
-.text {
-    align-items: center;
-    justify-content: center;
-    font-size: 2em;
-    padding-top: 200px;
-}
-
-h5 {
-    color: white;
-    background-color: black;
-}
-
-.span-carousel {
-    color: white;
-    background-color: black;
-}
-
-/* --------------- PAGE PRODUIT ----------------------- */
-
-.product{
-  background-image: url(/photos/bieres.png);
-  background-position: top;
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 100px 0;
-}
-
-.product h1{
-    text-align: center;
-    font-size: 50px;
-    border-bottom: 2px solid orangered;
-    border-left: 2px solid orangered;
-    margin: 50px auto;
-    padding: 20px 10px;
-    width: 50%;
-}
-
-.photo-bieres {
-    align-items: center;
-    border-radius: 30%;
-    width: 300px;
-    height: 400px;
-}
-
-.product table{
-    padding: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: auto;
-    text-align: center;
-    border: 1px solid black;
-}
-
-#photo-rakoon {
-    border-radius: 40%;
-}
-
-#biere {
-    font-size: 2em;
-}
-
 .except {
     text-align: left;
 }
@@ -352,6 +363,7 @@ h5 {
     font-size: 1em;
 }
 
+/* --------------- RESPONSIVE --------------- */
 @media screen and (max-width: 576px) {
     .text {
         padding-top: 100px;

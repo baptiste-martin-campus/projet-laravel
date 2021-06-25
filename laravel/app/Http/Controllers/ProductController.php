@@ -10,8 +10,7 @@ class ProductController extends Controller
 {
   public function show(){
     $products = DB::select('select * from products');
-    dd($products);
-    return view('product-list', ['product' => $products]);
+    return view('product-list', ['products' => $products]);
   }
 
   public function product($id){

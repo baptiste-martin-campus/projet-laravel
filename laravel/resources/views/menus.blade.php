@@ -30,10 +30,10 @@
                                 <li>
                                     <hr class="dropdown-divider" />
                                 </li>
-                                <li><a class="dropdown-item" href="{{asset('product/biquette')}}">La Biquette</a></li>
-                                <li><a class="dropdown-item" href="{{asset('product/lion')}}">La Lion</a></li>
-                                <li><a class="dropdown-item" href="{{asset('product/rakoon')}}">La Rakoon</a></li>
-                                <li><a class="dropdown-item" href="{{asset('product/grizzly')}}">La Grizzly</a></li>
+                                <li><a class="dropdown-item" href="{{asset('product/5')}}">La Biquette</a></li>
+                                <li><a class="dropdown-item" href="{{asset('product/7')}}">La Lion</a></li>
+                                <li><a class="dropdown-item" href="{{asset('product/8')}}">La Rakoon</a></li>
+                                <li><a class="dropdown-item" href="{{asset('product/6')}}">La Grizzly</a></li>
                             </ul>
                         </div>
                     </li>
