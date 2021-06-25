@@ -64,7 +64,29 @@
             </div>
 </section>
 
-<section class="product-list2">
-    
+<section class="product-list-tri">
+
+    <div class="triNom">
+        <h2>Tri par nom</h2>
+        @foreach ($products as $product)
+        <ul>
+            <li>{{$product->name}}</li>
+            <li>{{$product->price}}</li>
+            <li>{{$product->description}}</li>
+        </ul>
+        @endforeach
+    </div>
+
+    <div class="triPrix">
+        <h2>Tri par nom</h2>
+        @foreach ($products as $product)
+        <ul>
+            <li>{{$product->name}}</li>
+            <li>{{$product->price}} €</li>
+            <li>{{$product->description}}</li>
+        </ul>
+        @endforeach
+    </div>
+
 </section>
 @endsection
