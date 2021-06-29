@@ -14,7 +14,7 @@
                 </p>
             </div>
 
-            <div class="col-4 sm-12 boite">
+            <div class="col-4 sm-12 boite" style="height: 500px; z-index:0;">
 
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 
@@ -65,20 +65,15 @@
 </section>
 
 <section class="product-list-tri">
-
-    <div class="triNom">
-        <h2>Tri par nom</h2>
-        @foreach ($products as $product)
-        <ul>
-            <li>{{$product->name}}</li>
-            <li>{{$product->price}}</li>
-            <li>{{$product->description}}</li>
-        </ul>
-        @endforeach
-    </div>
-
-    <div class="triPrix">
-        <h2>Tri par nom</h2>
+        <h2>Tri des articles</h2>
+        <form class="mb-4" style="text-align: center;" action="#" method="post">
+            <select class="form-select" style="width: 50%; margin: 0 auto; " aria-label="Tri">
+                <option selected>Trier par</option>
+                <option value="1">Nom</option>
+                <option value="2">Prix ordre croissant</option>
+            </select>
+            <button class="btn btn-primary" type="submit" name="submit">OK</button>
+        </form>
         @foreach ($products as $product)
         <ul>
             <li>{{$product->name}}</li>

@@ -8,14 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+    public function store(){
 
-    public function triNom(){
-      $products = DB::select('select * from products order by name');
-      return view('product-list', ['products' => $products]);
-    }
-
-    public function triPrix(){
-      $products = DB::select('select * from products order by price');
-      return view('product-list', ['products' => $products]);
     }
 }

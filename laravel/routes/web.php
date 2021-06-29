@@ -18,13 +18,8 @@ use App\Http\Controllers\CartController;
 */
 
 Route::get('/', [HomeController::class, 'show']);
-Route::get('/membres', [HomeController::class, 'showMembres']);
-Route::get('/membres/hubert', [HomeController::class, 'showHubert']);
-Route::get('/membres/aurelien', [HomeController::class, 'showAurelien']);
-Route::get('/membres/lucie', [HomeController::class, 'showLucie']);
-Route::get('/membres/hercule', [HomeController::class, 'showHercule']);
-Route::get('/contact', [HomeController::class, 'showContact']);
 
+Route::get('/contact', [HomeController::class, 'showContact']);
 
 Route::get('/product', [ProductController::class, 'show']);
 
