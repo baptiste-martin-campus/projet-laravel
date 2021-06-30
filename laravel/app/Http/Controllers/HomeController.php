@@ -33,4 +33,8 @@ class HomeController extends Controller
     public function showContact(){
       return view('contact');
     }
+
+    public function showForm(){
+        return view('formulaire');
+    }
 }

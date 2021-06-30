@@ -30,3 +30,8 @@ Route::get('/productPrice', [ProductController::class, 'showByPrice']);
 Route::get('/product/{id}', [ProductController::class, 'product']);
 
 Route::get('/cart', [CartController::class, 'show']);
+
+Route::get('/form', [HomeController::class, 'showForm']);
+
+Route::get('/product/create', [BackOfficeController::class, 'create']);
+Route::post('/product', [BackOfficeController::class, 'store']);

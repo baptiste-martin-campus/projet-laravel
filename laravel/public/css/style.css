@@ -186,7 +186,52 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* --------------- JESAISPASENCORE ----------------------- */
+/* --------------- FORMULAIRE PRODUIT ----------------------- */
+
+.formulaire{
+    padding-top: 100px;
+    background-image: url(/photos/bieres.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.formulaire .background{
+    background: none;
+    background-color: white;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px 0;
+    box-shadow: 5px 5px 10px black;
+}
+
+.formulaire h1{
+    text-align: center;
+    border-top: 2px solid orangered;
+    border-bottom: 2px solid orangered;
+    background: rgb(206,86,30);
+    background: radial-gradient(circle, rgba(206,86,30,1) 0%, rgba(206,86,30,0.5) 50%, rgba(206,86,30,0) 100%);
+    margin: 0 auto 50px auto;
+    padding: 20px 10px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.formulaire h2{
+    text-align: center;
+    background: none;
+    margin: 0 auto 50px auto;
+    padding: 20px 10px;
+    color: orangered;
+}
+
+.formulaire form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* --------------- manquant ----------------------- */
+
 #menuaccueil img {
     padding: 25px 25px;
     width: 200px;
