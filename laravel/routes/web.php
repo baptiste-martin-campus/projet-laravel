@@ -23,6 +23,10 @@ Route::get('/contact', [HomeController::class, 'showContact']);
 
 Route::get('/product', [ProductController::class, 'show']);
 
+Route::get('/productName', [ProductController::class, 'showByName']);
+
+Route::get('/productPrice', [ProductController::class, 'showByPrice']);
+
 Route::get('/product/{id}', [ProductController::class, 'product']);
 
 Route::get('/cart', [CartController::class, 'show']);

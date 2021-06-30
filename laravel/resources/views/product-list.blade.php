@@ -64,24 +64,4 @@
             </div>
 </section>
 
-<section class="product-list-tri">
-        <h2>Tri des articles</h2>
-        <form class="mb-4" style="text-align: center;" action="#" method="post">
-            <select class="form-select" style="width: 50%; margin: 0 auto; " aria-label="Tri">
-                <option selected>Trier par</option>
-                <option value="1">Nom</option>
-                <option value="2">Prix ordre croissant</option>
-            </select>
-            <button class="btn btn-primary" type="submit" name="submit">OK</button>
-        </form>
-        @foreach ($products as $product)
-        <ul>
-            <li>{{$product->name}}</li>
-            <li>{{$product->price}} €</li>
-            <li>{{$product->description}}</li>
-        </ul>
-        @endforeach
-    </div>
-
-</section>
 @endsection
