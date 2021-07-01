@@ -14,7 +14,8 @@ class BackOfficeController extends Controller
      */
     public function index()
     {
-        return view('backoffice');
+        $products = Product::all();
+        return view('backoffice', ['products' -> $products]);
     }
 
     /**
@@ -24,7 +25,7 @@ class BackOfficeController extends Controller
      */
     public function create()
     {
-        return view('product.formulaire');
+        return view('formulaire');
     }
 
     /**

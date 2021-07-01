@@ -8,7 +8,7 @@
 
         <h2>Ajouter un produit</h2>
 
-        <form method="post" action="/product-list">
+        <form method="post" action="/backoffice">
             {{ csrf_field() }}
 
             <div class="mb-3">

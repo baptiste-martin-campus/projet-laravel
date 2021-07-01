@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\BackOfficeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,5 +34,7 @@ Route::get('/cart', [CartController::class, 'show']);
 
 Route::get('/form', [HomeController::class, 'showForm']);
 
-Route::get('/product/create', [BackOfficeController::class, 'create']);
-Route::post('/product', [BackOfficeController::class, 'store']);
+Route::get('/backoffice/product', [BackOfficeController::class, 'index']);
+Route::get('/backoffice/product/create', [BackOfficeController::class, 'create']);
+Route::get('/backoffice/product/edit', [BackOfficeController::class, 'edit']);
+Route::post('/backoffice/product', [BackOfficeController::class, 'store']);
