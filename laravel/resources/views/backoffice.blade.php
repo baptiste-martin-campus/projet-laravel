@@ -3,8 +3,7 @@
 <section class="product-list-tri">
     <h2>Liste des produits</h2>
 
-    <a href="/product/create" class="btn btn-primary">Ajouter un produit</a>
-
+    <a href="{{'backoffice.create'}}" class="btn btn-primary">Ajouter un produit</a>
     <table class="table table-striped table-dark">
         <thead>
             <tr>
@@ -21,14 +20,16 @@
 
             @foreach ($products as $product)
 
-            <tr class="list-group mb-4" style="border: 3px solid orangered; width: 50%; margin: 0 auto;">
+            <tr class="mb-4" style="border: 3px solid orangered;">
                 <th scope="row">{{$product->id}}</th>
-                <td>{{$product->picture}}</td>
-                <td>{{$product->name}}</td>
-                <td>{{$product->price}} €</td>
-                <td>{{$product->description}}</td>
-                <td><a href="/product/edit" class="btn btn-success">Modifier</a>
-                    <a href="#" class="btn btn-danger">Supprimer</a>
+                <td scope="row"><img src="{{$product->picture}}" alt="image" style="width: 250px; height: 250px;"></td>
+                <td scope="row">{{$product->name}}</td>
+                <td scope="row">{{$product->price}} €</td>
+                <td scope="row">{{$product->description}}</td>
+                <td scope="row">
+                  <a href="{{'backoffice.show'}}" class="btn btn-success">Voir</a>
+                  <a href="{{'backoffice.edit'}}" class="btn btn-warning">Modifier</a>
+                  <a href="{{'backoffice.destroy'}}" class="btn btn-danger">Supprimer</a>
                 </td>
             </tr>
 
@@ -39,4 +40,4 @@
 
 </section>
 
-@endsection
+@ @@

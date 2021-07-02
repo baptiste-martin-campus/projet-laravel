@@ -8,7 +8,7 @@
 
         <h2>Ajouter un produit</h2>
 
-        <form method="post" action="/backoffice">
+        <form method="post" action="{{route('backoffice.store')}}">
             {{ csrf_field() }}
 
             <div class="mb-3">

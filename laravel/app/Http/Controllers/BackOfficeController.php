@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\BackOfficeController;
+use Illuminate\Support\Facades\DB;
 use App\Models\Product;
+use App\Http\Controllers\ProductController;
 
 class BackOfficeController extends Controller
 {
@@ -15,7 +18,7 @@ class BackOfficeController extends Controller
     public function index()
     {
         $products = Product::all();
-        return view('backoffice', ['products' -> $products]);
+        return view('backoffice', ['products' => $products]);
     }
 
     /**
@@ -25,7 +28,7 @@ class BackOfficeController extends Controller
      */
     public function create()
     {
-        return view('formulaire');
+        return view('backoffice.create');
     }
 
     /**
@@ -36,21 +39,22 @@ class BackOfficeController extends Controller
      */
     public function store(Request $request)
     {
-        $dataProduct = [
-            'product' => [
-                'name' => $request->input('name'),
-                'price' => $request->input('price'),
-                'picture' => $request->input('picture'),
-                'weight' => $request->input('weight'),
-                'quantity' => $request->input('quantity'),
-                'available' => $request->input('available'),
-                'type' => $request->input('type'),
-                'description' => $request->input('description'),
-                'category_id' => $request->input('category_id'),
-            ],
-        ];
+        $product = new Product;
 
-        return view('news.result', $dataNews);
+                $product->name = $request->input('name');
+                $product->price = $request->input('price');
+                $product->picture = $request->input('picture');
+                $product->weight = $request->input('weight');
+                $product->quantity = $request->input('quantity');
+                $product->available = $request->input('available');
+                $product->type = $request->input('type');
+                $product->category_id = $request->input('category_id');
+                $product->description = $request->input('description');
+
+                $product -> save();
+
+
+        return redirect() -> route('backoffice.index');
     }
 
     /**
@@ -61,7 +65,8 @@ class BackOfficeController extends Controller
      */
     public function show($id)
     {
-        //
+      $product = Product::find($id);
+      return view('backoffice.show') -> with('product', $product);
     }
 
     /**
@@ -72,7 +77,8 @@ class BackOfficeController extends Controller
      */
     public function edit($id)
     {
-        //
+      $product = Product::find($id);
+      return view('backoffice.edit', ['product' => $product]);
     }
 
     /**

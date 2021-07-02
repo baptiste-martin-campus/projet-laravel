@@ -34,7 +34,4 @@ Route::get('/cart', [CartController::class, 'show']);
 
 Route::get('/form', [HomeController::class, 'showForm']);
 
-Route::get('/backoffice/product', [BackOfficeController::class, 'index']);
-Route::get('/backoffice/product/create', [BackOfficeController::class, 'create']);
-Route::get('/backoffice/product/edit', [BackOfficeController::class, 'edit']);
-Route::post('/backoffice/product', [BackOfficeController::class, 'store']);
+Route::resource('backoffice', BackOfficeController::class);
