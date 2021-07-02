@@ -55,7 +55,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="">Categorie</label>
+                <label class="form-label">Categorie</label>
                 <select class="form-select" name="category_id" value="{{$product->category_id}}">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -65,12 +65,15 @@
                 </select>
             </div>
 
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" name="available" value="{{$product->available}}">
-                <label class="form-check-label" for="available">Disponible ?</label>
+            <div class="mb-3">
+                <label class="form-label" for="available">Disponible ?</label>
+                <select class="form-select" name="available" value="{{$product->available}}">
+                    <option value="0">0 (Non)</option>
+                    <option value="1">1 (Oui)</option>
+                </select>
             </div>
 
-            <button type="submit" class="btn btn-primary">Ajouter</button>
+            <button type="submit" class="btn btn-primary">Appliquer les changements</button>
 
             {{ method_field('PUT') }}
 

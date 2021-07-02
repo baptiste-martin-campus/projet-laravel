@@ -9,7 +9,7 @@ class Product extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
+    public $timestamps = false; // horodatage
 
-    protected $fillable = ['id', 'name','price','picture','weight','quantity','available','type','category_id'];
+    protected $fillable = ['id', 'name','price','picture','weight','quantity','available','type','category_id']; //Autorise les colonnes à Laravel de remplir la BDD
 }

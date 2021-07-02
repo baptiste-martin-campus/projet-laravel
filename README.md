@@ -1,5 +1,54 @@
 MEMO
 
+//LES CODES HTTP
+
+200 : Succès de la requête
+
+301 : Document déplacé de façon permanente, il faut modifier les liens d'une URL
+
+302 : Document déplacé de façon temporaire, il faut changer la methode utilisée en get avec 303 See Also
+
+404 : Ressource non trouvée, changer le lien
+
+500 : Erreur interne du serveur, il faut régler la defaillance d'un fichier
+
+
+
+
+//LES METHODES HTTP
+
+GET
+La méthode GET demande une représentation de la ressource spécifiée. Les requêtes GET doivent uniquement être utilisées afin de récupérer des données.
+
+HEAD
+La méthode HEAD demande une réponse identique à une requête GET pour laquelle on aura omis le corps de la réponse (on a uniquement l'en-tête).
+
+POST
+La méthode POST est utilisée pour envoyer une entité vers la ressource indiquée. Cela  entraîne généralement un changement d'état ou des effets de bord sur le serveur.
+
+PUT
+La méthode PUT remplace toutes les représentations actuelles de la ressource visée par le contenu de la requête.
+
+DELETE
+La méthode DELETE supprime la ressource indiquée.
+
+CONNECT
+La méthode CONNECT établit un tunnel vers le serveur identifié par la ressource cible.
+
+OPTIONS
+La méthode OPTIONS est utilisée pour décrire les options de communications avec la ressource visée.
+
+TRACE
+La méthode TRACE réalise un message de test aller/retour en suivant le chemin de la ressource visée.
+
+PATCH
+La méthode PATCH est utilisée pour appliquer des modifications partielles à une ressource.
+
+
+
+
+//LES DIFFERENTS DOSSIERS DE LARAVEL
+
 app
 Le dossier app est le dossier le plus important de votre projet. C'est celui qui contiendra votre application, c'est à dire, tout votre code PHP (fonctions, classes…).
 
