@@ -11,5 +11,5 @@ class Product extends Model
 
     public $timestamps = false;
 
-    protected $products = ['id', 'name','price','picture','weight','quantity','available','type','category_id'];
+    protected $fillable = ['id', 'name','price','picture','weight','quantity','available','type','category_id'];
 }

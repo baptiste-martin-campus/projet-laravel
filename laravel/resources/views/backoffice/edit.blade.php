@@ -45,7 +45,7 @@
 
             <div class="mb-3">
                 <label class="form-label">Type</label>
-                <select class="form-select" name="type">
+                <select class="form-select" name="type" value="{{$product->type}}">
                     <option value="brune">Brune</option>
                     <option value="blonde">Blonde</option>
                     <option value="blanche">Blanche</option>
@@ -66,7 +66,7 @@
             </div>
 
             <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" name="available">
+                <input type="checkbox" class="form-check-input" name="available" value="{{$product->available}}">
                 <label class="form-check-label" for="available">Disponible ?</label>
             </div>
 

@@ -66,8 +66,11 @@
             </div>
 
             <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" name="available">
-                <label class="form-check-label" for="available">Disponible ?</label>
+              <label class="form-check-label" for="available">Disponible ?</label>
+              <select class="form-select" name="available">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+              </select>
             </div>
 
             <button type="submit" class="btn btn-primary">Ajouter</button>

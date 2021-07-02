@@ -3,7 +3,7 @@
 <section class="product-list-tri">
     <h2>Liste des produits</h2>
 
-    <a href="{{'backoffice.create'}}" class="btn btn-primary">Ajouter un produit</a>
+    <a href="{{route('backoffice.create')}}" class="btn btn-primary">Ajouter un produit</a>
     <table class="table table-striped table-dark">
         <thead>
             <tr>
@@ -27,9 +27,13 @@
                 <td scope="row">{{$product->price}} €</td>
                 <td scope="row">{{$product->description}}</td>
                 <td scope="row">
-                  <a href="{{'backoffice.show'}}" class="btn btn-success">Voir</a>
-                  <a href="{{'backoffice.edit'}}" class="btn btn-warning">Modifier</a>
-                  <a href="{{'backoffice.destroy'}}" class="btn btn-danger">Supprimer</a>
+                    <a href="{{route('backoffice.show',$product->id)}}" class="btn btn-success">Voir</a>
+                    <a href="{{route('backoffice.edit',$product->id)}}" class="btn btn-warning">Modifier</a>
+                    <form class="" action="{{route('backoffice.destroy',$product->id)}}" method="post">
+                        {{ csrf_field() }}
+                        <button class="btn btn-danger" type="submit" title="Delete Post">Supprimer</button>
+                        {{ method_field('DELETE') }}
+                    </form>
                 </td>
             </tr>
 
@@ -40,4 +44,5 @@
 
 </section>
 
-@ @@
+@
+@@
