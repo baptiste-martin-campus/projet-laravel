@@ -43,6 +43,13 @@ class BackOfficeController extends Controller
       $validated = $request->validate([
         'name' => 'required|max:255|unique:products',
         'price' => 'required|numeric|min:0',
+        'picture' => 'required',
+        'weight' => 'required|numeric|min:0',
+        'quantity' => 'required|numeric|min:0',
+        'available' => 'required|numeric|min:0|max:1',
+        'type' => 'required',
+        'category_id' => 'required',
+        'description' => 'required',
       ]);
 
         $product = new Product;

@@ -7,11 +7,8 @@
 @foreach ($order as $commande)
 
     <div class="card" style="width: 18rem;">²
-
-
         <div class="card-body">
           @csrf
-
             <p class="card-text" style="color: rgb(248, 11, 11)">Description produit</p>
         </div>
 
