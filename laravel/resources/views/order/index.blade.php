@@ -24,7 +24,5 @@
 
               {{ csrf_field() }}
 
-
-
 @endforeach
 @stop

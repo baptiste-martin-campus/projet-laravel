@@ -9,6 +9,10 @@ class Category extends Model
 {
     use HasFactory;
 
+    public $timestamps = false; // horodatage
+
+    protected $fillable = ['id', 'name', 'description']; //Autorise les colonnes à Laravel de remplir la BDD
+
     public function products(){
       return $this->hasMany(Product::class);
     }

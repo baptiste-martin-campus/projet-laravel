@@ -14,6 +14,15 @@
             <div class="mb-3">
                 <label class="form-label">Nom du produit</label>
                 <input type="text" class="form-control" name="name">
+                @if ($errors->any())
+                  <div class="alert alert-danger">
+                    <ul>
+                      @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                      @endforeach
+                    </ul>
+                  </div>
+                @endif
             </div>
 
             <div class="mb-3">
@@ -66,11 +75,11 @@
             </div>
 
             <div class="mb-3">
-              <label class="form-label" for="available">Disponible ?</label>
-              <select class="form-select" name="available">
-                  <option value="0">0 (Non)</option>
-                  <option value="1">1 (Oui)</option>
-              </select>
+                <label class="form-label" for="available">Disponible ?</label>
+                <select class="form-select" name="available">
+                    <option value="0">0 (Non)</option>
+                    <option value="1">1 (Oui)</option>
+                </select>
             </div>
 
             <button type="submit" class="btn btn-primary">Ajouter</button>

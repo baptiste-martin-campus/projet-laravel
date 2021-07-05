@@ -39,6 +39,12 @@ class BackOfficeController extends Controller
      */
     public function store(Request $request)
     {
+
+      $validated = $request->validate([
+        'name' => 'required|max:255|unique:products',
+        'price' => 'required|numeric|min:0',
+      ]);
+
         $product = new Product;
 
                 $product->name = $request->input('name');
@@ -50,6 +56,7 @@ class BackOfficeController extends Controller
                 $product->type = $request->input('type');
                 $product->category_id = $request->input('category_id');
                 $product->description = $request->input('description');
+
 
                 $product -> save();
 
