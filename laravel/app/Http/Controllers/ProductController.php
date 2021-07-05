@@ -31,4 +31,12 @@ class ProductController extends Controller
       return view('tri', ['products' => $productsPrice]);
   }
 
+  public function categories(){
+    return $this->belongsToMany(Categories::class);
+  }
+
+  public function orders(){
+    return $this->belongsToMany(Orders::class);
+  }
+
 }

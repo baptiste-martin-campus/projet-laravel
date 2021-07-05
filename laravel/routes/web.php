@@ -6,6 +6,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\BackOfficeController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +37,7 @@ Route::get('/cart', [CartController::class, 'show']);
 Route::get('/form', [HomeController::class, 'showForm']);
 
 Route::resource('backoffice', BackOfficeController::class);
+
+Route::resource('category', CategoryController::class);
+
+Route::resource('order', OrderController::class);

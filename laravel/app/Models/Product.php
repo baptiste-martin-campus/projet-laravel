@@ -12,4 +12,13 @@ class Product extends Model
     public $timestamps = false; // horodatage
 
     protected $fillable = ['id', 'name','price','picture','weight','quantity','available','type','category_id']; //Autorise les colonnes à Laravel de remplir la BDD
+
+    public function categories(){
+      return $this->belongsToMany(Category::class);
+    }
+
+    public function products(){
+      return $this->belongsToMany(Orders::class);
+    }
+
 }
