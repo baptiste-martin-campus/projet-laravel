@@ -36,8 +36,18 @@ Route::get('/cart', [CartController::class, 'show']);
 
 Route::get('/form', [HomeController::class, 'showForm']);
 
-Route::resource('backoffice', BackOfficeController::class);
+Route::resource('backoffice', BackOfficeController::class)->middleware('auth');
 
 Route::resource('category', CategoryController::class);
 
-Route::resource('order', OrderController::class);
+Route::resource('order', OrderController::class)->middleware('auth');
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
